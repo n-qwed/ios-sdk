@@ -99,7 +99,7 @@ public struct Pokepay {
             if let group = token.capture(
                 // * https://www.pokepay.jp/pd?={25 ALNUM} - (Pokeregi_V1 OfflineMode NFC)
                 // * https://www.pokepay.jp/pd/{25 ALNUM} - (Pokeregi_V2 OfflineMode QR & NFC)
-                pattern: "^https://www(?:-dev|-sandbox|-qa|)\\.pokepay\\.jp/pd(?:/|\\?d=)([0-9A-Z]{25})$", group: 1) {
+                pattern: "^https://www(?:-dev|-sandbox|-qa|-load-test|)\\.pokepay\\.jp/pd(?:/|\\?d=)([0-9A-Z]{25})$", group: 1) {
                 return (matched: true, key: group)
             }
             return (matched: false, key: "")
