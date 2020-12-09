@@ -3,4 +3,5 @@ public enum Env: String {
     case sandbox = "sandbox"
     case development = "dev"
     case loadtest = "load-test"
+    case qa = "qa"
 }
